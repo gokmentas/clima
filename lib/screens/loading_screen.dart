@@ -20,10 +20,14 @@ class _LoadingScreenState extends State<LoadingScreen> {
       print("Location permissions denied forever.");
     } else {
       // Location permissions granted. You can now proceed to get the location.
-      Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.low,
-      );
-      print(position);
+      try {
+        Position position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.low,
+        );
+        print(position);
+      } catch (e) {
+        print(e);
+      }
     }
   }
 
@@ -35,17 +39,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        // body: Center(
-        //   child: MaterialButton(
-        //     onPressed: () {
-        //       //Get the current location
-        //       getLocation();
-        //     },
-        //     color: Colors.blue,
-        //     child: const Text("Get Location"),
-        //   ),
-        // ),
-        );
+    return Scaffold();
   }
 }
