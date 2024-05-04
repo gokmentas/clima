@@ -18,6 +18,7 @@ class Location {
       try {
         Position position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.low,
+          forceAndroidLocationManager: true,
         );
         latitude = position.latitude;
         longitude = position.longitude;
