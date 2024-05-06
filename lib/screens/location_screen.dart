@@ -86,7 +86,7 @@ class _LocationScreenState extends State<LocationScreen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return CityScreen();
+                            return const CityScreen();
                           },
                         ),
                       );
@@ -99,7 +99,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(left: 15.0),
+                padding: const EdgeInsets.only(left: 15.0),
                 child: Row(
                   children: [
                     Text(
@@ -114,7 +114,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 15.0),
+                padding: const EdgeInsets.only(left: 15.0),
                 child: Text(
                   "$message in $cityName",
                   textAlign: TextAlign.right,
